@@ -14,3 +14,9 @@ require.config({
         }
     }
 });
+
+// Initialize app. Since you're in the
+// same folder, no need to specify the path of the file app.js
+require(['app'], function(App) {
+    App.initialize();
+});
