@@ -2,7 +2,7 @@ define(
     [
     'jquery',
     'underscore',
-    'collections/users.js',
+    'collections/users',
     'text!templates/user/list.html',
     'backbone'
 ], function($, _, UsersCollection, Backbone) {
@@ -13,7 +13,7 @@ define(
             this.collection.add({username: "user_test"});
 
             var compiledTemplate = _.template(userListTemplate, {
-                users: this.collection.models;
+                users: this.collection.models
             });
             this.$el.html(compiledTemplate);
         }
